@@ -1,0 +1,49 @@
+{
+  "name": "sales-video-generator",
+  "version": "1.0.0",
+  "description": "One command renders a personalized demo video for a prospect: Playwright screenshots their site, Claude writes a call script against the agent spec, ElevenLabs voices both sides, Remotion renders the MP4.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oleksiv/sales-video-generator"
+  },
+  "author": "Sviatoslav Oleksiv (https://oleksiv.com)",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@remotion/cli": "4.0.488",
+    "@remotion/media": "4.0.488",
+    "@remotion/studio": "^4.0.488",
+    "@remotion/tailwind-v4": "4.0.488",
+    "mediabunny": "1.50.8",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.488",
+    "tailwindcss": "4.0.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.111.0",
+    "@elevenlabs/elevenlabs-js": "^2.57.0",
+    "@remotion/eslint-config-flat": "4.0.488",
+    "@types/node": "^26.1.1",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "dotenv": "^17.4.2",
+    "eslint": "9.19.0",
+    "playwright-core": "^1.61.1",
+    "prettier": "3.8.1",
+    "tsx": "^4.23.0",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "generate-demo": "tsx scripts/generate-demo.ts",
+    "record-site": "node scripts/record-site.mjs",
+    "build": "remotion bundle",
+    "lint": "eslint src && tsc && tsc -p scripts"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

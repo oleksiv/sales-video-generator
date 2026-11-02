@@ -1,0 +1,9 @@
+node_modules
+dist
+out
+.DS_Store
+.env
+
+# Generated per-prospect assets stay local. Only the sample ships with the repo.
+public/companies/*
+!public/companies/sparkling-pools/
